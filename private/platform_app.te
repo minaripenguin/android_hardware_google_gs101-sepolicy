@@ -1,0 +1,2 @@
+# allow platform apps to access google battery hal service
+allow platform_app googlebattery_hal_service:service_manager { find };

@@ -19,5 +19,5 @@ dontaudit priv_app adbd_prop:file { open };
 dontaudit priv_app adbd_prop:file { getattr };
 dontaudit priv_app proc_vendor_sched:file write;
 
-type googlebattery_hal_service, hal_service_type, service_manager_type;
+# allow privileged apps to access google battery hal service
 allow priv_app googlebattery_hal_service:service_manager { find };
