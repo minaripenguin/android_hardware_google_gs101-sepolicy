@@ -4,3 +4,6 @@ set_prop(platform_app, shannon_ims_service_prop);
 
 # allow systemui to access fingerprint
 hal_client_domain(platform_app, hal_fingerprint)
+
+# allow platform apps to access google battery hal service
+allow platform_app googlebattery_hal_service:service_manager { find };
