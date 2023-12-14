@@ -1,0 +1,10 @@
+type vendor_dma_buf_file, file_type, data_file_type;
+type dmabuf, fs_type;
+type camera_google_app, domain, coredomain;
+app_domain(camera_google_app)
+
+allow camera_google_app dmabuf:dir rw_dir_perms;
+allow camera_google_app dmabuf:file create_file_perms;
+
+allow surfaceflinger dmabuf:filesystem getattr;
+allow surfaceflinger unlabeled:filesystem getattr;
